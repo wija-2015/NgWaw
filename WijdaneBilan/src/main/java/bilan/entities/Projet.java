@@ -1,0 +1,65 @@
+package bilan.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.*;
+
+import java.util.Collection;
+
+
+@Entity
+public class Projet implements Serializable {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int idProjet;
+	private String codeProjet;
+	private String nomProjet;
+
+	//bi-directional many-to-one association to Feedback
+	@OneToMany(mappedBy="projet")
+	private Collection<Feedback> feedbacks;
+
+	public Projet() {
+	}
+
+	public Projet(int idProjet, String codeProjet, String nomProjet) {
+		super();
+		this.idProjet = idProjet;
+		this.codeProjet = codeProjet;
+		this.nomProjet = nomProjet;
+	}
+
+	public int getIdProjet() {
+		return this.idProjet;
+	}
+
+	public void setIdProjet(int idProjet) {
+		this.idProjet = idProjet;
+	}
+
+	public String getCodeProjet() {
+		return this.codeProjet;
+	}
+
+	public void setCodeProjet(String codeProjet) {
+		this.codeProjet = codeProjet;
+	}
+
+	public String getNomProjet() {
+		return this.nomProjet;
+	}
+
+	public void setNomProjet(String nomProjet) {
+		this.nomProjet = nomProjet;
+	}
+
+	public Collection<Feedback> getFeedbacks() {
+		return this.feedbacks;
+	}
+
+	public void setFeedbacks(Collection<Feedback> feedbacks) {
+		this.feedbacks = feedbacks;
+	}
+
+}
