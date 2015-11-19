@@ -37,6 +37,16 @@ public class Managerrh implements Serializable {
 		this.idManagerrh = idManagerrh;
 	}
 
+	public Managerrh(int idManagerrh, String mailUser, String matriculeUser,
+			String nomUser, String prenomUser) {
+		super();
+		this.idManagerrh = idManagerrh;
+		this.mailUser = mailUser;
+		this.matriculeUser = matriculeUser;
+		this.nomUser = nomUser;
+		this.prenomUser = prenomUser;
+	}
+
 	public int getIdManagerrh() {
 		return idManagerrh;
 	}
