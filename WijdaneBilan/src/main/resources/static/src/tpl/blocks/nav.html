@@ -1,17 +1,17 @@
 <!-- list -->
 <ul class="nav" >
   <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-    <span translate="aside.nav.HEADER">Espace Administrateur</span>
+    <span>Espace Administrateur</span>
   </li>
   <li>
-   <!--  <a href class="auto">      
+     <a href class="auto">      
       <span class="pull-right text-muted">
         <i class="fa fa-fw fa-angle-right text"></i>
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
       <i class="icon-user icon text-success-lter"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Gestion Collaborateurs</span>
-    </a> -->
+      <span class="font-bold">Gestion Collaborateurs</span>
+    </a>
     <ul class="nav nav-sub dk">
       <li class="nav-sub-header">
         <a href>
@@ -20,16 +20,27 @@
       </li>
       <li ui-sref-active="active">
         <a ui-sref="app.collaborateurs">
-          <span>Ajouter collab</span>
+          <span>Ajouter/Modifier collaborateur</span>
+        </a>
+      </li>
+	  <li ui-sref-active="active">
+        <a ui-sref="app.collaborateurs">
+          <span>Consulter/Modifier fiche d'objectifs d'un collaborateur</span>
+        </a>
+      </li>
+	  <li ui-sref-active="active">
+        <a ui-sref="app.collaborateurs">
+          <span>Consulter feedbacks d'un collaborateur</span>
         </a>
       </li>
       <li ui-sref-active="active">
         <a ui-sref="app.collaborateursbap">
-          <span>Consulter Bap d'un collaborateur</span>
+          <span>Consulter Bap précédents d'un collaborateur</span>
         </a>
       </li>
     </ul>
   </li>
+  <li class="line dk hidden-folded"></li>
   <li>
     <a href class="auto">      
       <span class="pull-right text-muted">
@@ -37,26 +48,22 @@
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
       <i class="icon-user icon text-success-lter"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Gestion Managers RH</span>
+      <span class="font-bold">Gestion Managers RH</span>
     </a>
     <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span>Gestion Managers RH</span>
-        </a>
-      </li>
       <li ui-sref-active="active">
         <a ui-sref="app.collaborateurs">
-          <span>Ajouter Manager RH</span>
+          <span>Ajouter/Modifier Manager RH</span>
         </a>
       </li>
       <li ui-sref-active="active">
         <a ui-sref="app.collaborateursbap">
-          <span>Consulter fiche d'objectifs d'un Manager RH</span>
+          <span>Consulter/Modifier fiches d'objectifs d'un Manager RH</span>
         </a>
       </li>
     </ul>
   </li>
+  <li class="line dk hidden-folded"></li>
   <li>
     <a href class="auto">      
       <span class="pull-right text-muted">
@@ -64,17 +71,12 @@
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
       <i class="icon-user icon text-success-lter"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Gestion Encadrants</span>
+      <span class="font-bold">Gestion Encadrants</span>
     </a>
     <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span>Gestion Encadrants</span>
-        </a>
-      </li>
       <li ui-sref-active="active">
         <a ui-sref="app.collaborateurs">
-          <span>Ajouter Encadrant</span>
+          <span>Ajouter/Modifier Encadrant</span>
         </a>
       </li>
       <li ui-sref-active="active">
@@ -89,6 +91,8 @@
       </li>
     </ul>
   </li>
+  
+  <li class="line dk hidden-folded"></li>
   <li ui-sref-active="active">
     <a ui-sref="app.mail.list">
       <b class="badge bg-info pull-right">9</b>
