@@ -32,20 +32,19 @@ public class Managerrh implements Serializable {
 	public Managerrh() {
 	}
 
-	public Managerrh(int idManagerrh) {
-		super();
-		this.idManagerrh = idManagerrh;
-	}
 
-	public Managerrh(int idManagerrh, String mailUser, String matriculeUser,
-			String nomUser, String prenomUser) {
+	/*public Managerrh(int idManagerrh, String mailUser, String matriculeUser,
+			String nomUser, String prenomUser,
+			Collection<Collaborateur> collaborateurs) {
 		super();
 		this.idManagerrh = idManagerrh;
 		this.mailUser = mailUser;
 		this.matriculeUser = matriculeUser;
 		this.nomUser = nomUser;
 		this.prenomUser = prenomUser;
+		this.collaborateurs = collaborateurs;
 	}
+*/
 
 	public int getIdManagerrh() {
 		return idManagerrh;

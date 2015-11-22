@@ -25,11 +25,16 @@ public class Admin implements Serializable {
 	public Admin() {
 	}
 
-	public Admin(int idAdmin) {
+	public Admin(int idAdmin, String mailUser, String matriculeUser,
+			String nomUser, String prenomUser) {
 		super();
 		this.idAdmin = idAdmin;
+		this.mailUser = mailUser;
+		this.matriculeUser = matriculeUser;
+		this.nomUser = nomUser;
+		this.prenomUser = prenomUser;
 	}
-	
+
 	public int getIdAdmin() {
 		return idAdmin;
 	}

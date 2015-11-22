@@ -32,6 +32,20 @@ public class Bap implements Serializable {
 
 	public Bap() {
 	}
+	
+
+	public Bap(int idBap, Date dateBap, int mode, float noteFinaleBap,
+			String poste, String status, Collaborateur collaborateur) {
+		super();
+		this.idBap = idBap;
+		this.dateBap = dateBap;
+		this.mode = mode;
+		this.noteFinaleBap = noteFinaleBap;
+		this.poste = poste;
+		this.status = status;
+		this.collaborateur = collaborateur;
+	}
+
 
 	public int getIdBap() {
 		return this.idBap;

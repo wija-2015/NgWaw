@@ -1,7 +1,9 @@
 package bilan.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.util.Collection;
 
 
@@ -27,16 +29,19 @@ public class Objectif implements Serializable {
 
 	public Objectif() {
 	}
-	
+
 	public Objectif(int idObjectif, String description, String diffBapBip,
-			String moyenObj) {
+			String moyenObj,
+			Collection<EvaluationObjectif> evaluationobjectifs,
+			Categorie categorie) {
 		super();
 		this.idObjectif = idObjectif;
 		this.description = description;
 		this.diffBapBip = diffBapBip;
 		this.moyenObj = moyenObj;
+		this.evaluationobjectifs = evaluationobjectifs;
+		this.categorie = categorie;
 	}
-
 
 	public int getIdObjectif() {
 		return this.idObjectif;

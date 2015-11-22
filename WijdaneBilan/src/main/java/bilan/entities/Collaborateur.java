@@ -20,7 +20,7 @@ public class Collaborateur implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idCollaborateur;
-	private Date dateRecrutement = new Date();
+	private Date dateRecrutement;
 	private String mailUser;
 	private String matriculeUser;
 	private String nomUser;
@@ -31,7 +31,7 @@ public class Collaborateur implements Serializable {
 	private Collection<Bap> baps;
 
 	//bi-directional many-to-one association to Managerrh
-	@JsonBackReference
+	//@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name="id_managerrh")
 	private Managerrh managerrh;
@@ -46,12 +46,25 @@ public class Collaborateur implements Serializable {
 
 	public Collaborateur() {
 	}
-	public Collaborateur(int idCollaborateur, Date dateRecrutement) {
+	public Collaborateur(int idCollaborateur, Date dateRecrutement,
+			String mailUser, String matriculeUser, String nomUser,
+			String prenomUser, Collection<Bap> baps, Managerrh managerrh,
+			Collection<EvaluationObjectif> evaluationobjectifs,
+			Collection<Feedback> feedbacks) {
 		super();
 		this.idCollaborateur = idCollaborateur;
 		this.dateRecrutement = dateRecrutement;
+		this.mailUser = mailUser;
+		this.matriculeUser = matriculeUser;
+		this.nomUser = nomUser;
+		this.prenomUser = prenomUser;
+		this.baps = baps;
+		this.managerrh = managerrh;
+		this.evaluationobjectifs = evaluationobjectifs;
+		this.feedbacks = feedbacks;
 	}
-	
+
+
 	public int getIdCollaborateur() {
 		return idCollaborateur;
 	}

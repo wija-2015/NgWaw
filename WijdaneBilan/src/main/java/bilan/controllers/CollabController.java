@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import bilan.dao.ICollabRepository;
@@ -21,13 +23,15 @@ public class CollabController {
 @Autowired
 private ICollabService collabService;
 
+@ResponseBody
 @RequestMapping(value="findAll", method = RequestMethod.GET)
 public List<Collaborateur> getCollabs(){
-return collabService.toutsCollabs();
+return  collabService.toutsCollabs();
 }
 @RequestMapping(value="save", method = RequestMethod.POST)
-public Collaborateur saveCollab(Collaborateur c){
+public Collaborateur saveCollab(@RequestBody Collaborateur c){
 	collabService.ajouterCollab(c);
+	System.out.println(c.toString()+"  wijdane ");
 return c;
 }
 @RequestMapping(value="/{id}", method = RequestMethod.GET)

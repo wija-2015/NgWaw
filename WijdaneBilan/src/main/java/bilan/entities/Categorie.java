@@ -20,11 +20,13 @@ public class Categorie implements Serializable {
 
 	public Categorie() {
 	}
-	
-	public Categorie(int idCategorie, String nomCategorie) {
+
+	public Categorie(int idCategorie, String nomCategorie,
+			Collection<Objectif> objectifs) {
 		super();
 		this.idCategorie = idCategorie;
 		this.nomCategorie = nomCategorie;
+		this.objectifs = objectifs;
 	}
 
 	public int getIdCategorie() {

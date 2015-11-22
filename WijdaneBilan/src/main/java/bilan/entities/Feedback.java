@@ -45,6 +45,27 @@ public class Feedback implements Serializable {
 	public Feedback() {
 	}
 
+	public Feedback(int idFeedback, String role, int nbJours, Date dateDebut,
+			Date dateFin, String commentaire, int nbThemes, int totalPoints,
+			float noteGlobale, Collaborateur collaborateur,
+			Encadrant encadrant, Projet projet,
+			Collection<Qualification> qualifications) {
+		super();
+		this.idFeedback = idFeedback;
+		this.role = role;
+		this.nbJours = nbJours;
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+		this.commentaire = commentaire;
+		this.nbThemes = nbThemes;
+		this.totalPoints = totalPoints;
+		this.noteGlobale = noteGlobale;
+		this.collaborateur = collaborateur;
+		this.encadrant = encadrant;
+		this.projet = projet;
+		this.qualifications = qualifications;
+	}
+
 	public int getIdFeedback() {
 		return idFeedback;
 	}

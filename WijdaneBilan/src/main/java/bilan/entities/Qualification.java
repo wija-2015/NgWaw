@@ -1,6 +1,7 @@
 package bilan.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -30,10 +31,14 @@ public class Qualification implements Serializable {
 	public Qualification() {
 	}
 
-	public Qualification(int idQualification, String remarque) {
+	public Qualification(int idQualification, String remarque,
+			Feedback feedback, Theme theme, Typequalification typequalification) {
 		super();
 		this.idQualification = idQualification;
 		this.remarque = remarque;
+		this.feedback = feedback;
+		this.theme = theme;
+		this.typequalification = typequalification;
 	}
 
 	public int getIdQualification() {

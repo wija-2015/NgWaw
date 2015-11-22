@@ -39,11 +39,21 @@ public class Encadrant implements Serializable {
 	public Encadrant() {
 	}
 
-	public Encadrant(int idEncadrant) {
+	public Encadrant(int idEncadrant, String mailUser, String matriculeUser,
+			String nomUser, String prenomUser, Profil profil,
+			Collection<EvaluationObjectif> evaluationobjectifs,
+			Collection<Feedback> feedbacks) {
 		super();
 		this.idEncadrant = idEncadrant;
+		this.mailUser = mailUser;
+		this.matriculeUser = matriculeUser;
+		this.nomUser = nomUser;
+		this.prenomUser = prenomUser;
+		this.profil = profil;
+		this.evaluationobjectifs = evaluationobjectifs;
+		this.feedbacks = feedbacks;
 	}
-	
+
 	public int getIdEncadrant() {
 		return idEncadrant;
 	}

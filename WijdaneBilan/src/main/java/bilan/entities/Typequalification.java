@@ -1,7 +1,9 @@
 package bilan.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.util.Collection;
 
 @Entity
@@ -21,11 +23,13 @@ public class Typequalification implements Serializable {
 	public Typequalification() {
 	}
 
-	public Typequalification(int idTypeQ, String nomTypeQ, int poidsTypeQ) {
+	public Typequalification(int idTypeQ, String nomTypeQ, int poidsTypeQ,
+			Collection<Qualification> qualifications) {
 		super();
 		this.idTypeQ = idTypeQ;
 		this.nomTypeQ = nomTypeQ;
 		this.poidsTypeQ = poidsTypeQ;
+		this.qualifications = qualifications;
 	}
 
 	public int getIdTypeQ() {

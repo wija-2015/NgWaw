@@ -21,11 +21,16 @@ public class Theme implements Serializable {
 
 	public Theme() {
 	}
-	public Theme(int idTheme, String nomTheme) {
+	
+
+	public Theme(int idTheme, String nomTheme,
+			Collection<Qualification> qualifications) {
 		super();
 		this.idTheme = idTheme;
 		this.nomTheme = nomTheme;
+		this.qualifications = qualifications;
 	}
+
 
 	public int getIdTheme() {
 		return this.idTheme;

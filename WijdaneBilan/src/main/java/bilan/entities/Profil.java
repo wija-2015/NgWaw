@@ -26,10 +26,12 @@ public class Profil implements Serializable {
 	public Profil() {
 	}
 
-	public Profil(int idProfil, String nomProfil) {
+	public Profil(int idProfil, String nomProfil,
+			Collection<Encadrant> encadrants) {
 		super();
 		this.idProfil = idProfil;
 		this.nomProfil = nomProfil;
+		this.encadrants = encadrants;
 	}
 
 	public int getIdProfil() {

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import bilan.dao.IAdminRepository;
-import bilan.dao.IManagerRepository;
 import bilan.entities.Admin;
 import bilan.entities.Managerrh;
 
@@ -54,5 +53,13 @@ public class IAdminServiceImpl implements IAdminService{
 	}
 	
 	
+
+	public IAdminRepository getAdminRepository() {
+		return adminRepository;
+	}
+
+	public void setAdminRepository(IAdminRepository adminRepository) {
+		this.adminRepository = adminRepository;
+	}
 
 }

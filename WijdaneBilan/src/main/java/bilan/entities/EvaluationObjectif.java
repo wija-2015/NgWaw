@@ -1,6 +1,7 @@
 package bilan.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -33,14 +34,21 @@ public class EvaluationObjectif implements Serializable {
 	public EvaluationObjectif() {
 		
 	}
-	public EvaluationObjectif(int idEvaluationObj, String mesureObj, float noteFinaleObj, float poidsObj, float resultatObj) {
+	
+	public EvaluationObjectif(int idEvaluationObj, String mesureObj,
+			float noteFinaleObj, float poidsObj, float resultatObj,
+			Collaborateur collaborateur, Encadrant encadrant, Objectif objectif) {
 		super();
 		this.idEvaluationObj = idEvaluationObj;
 		this.mesureObj = mesureObj;
 		this.noteFinaleObj = noteFinaleObj;
 		this.poidsObj = poidsObj;
 		this.resultatObj = resultatObj;
+		this.collaborateur = collaborateur;
+		this.encadrant = encadrant;
+		this.objectif = objectif;
 	}
+
 	public int getIdEvaluationObj() {
 		return idEvaluationObj;
 	}

@@ -23,12 +23,16 @@ public class Projet implements Serializable {
 	public Projet() {
 	}
 
-	public Projet(int idProjet, String codeProjet, String nomProjet) {
+
+	public Projet(int idProjet, String codeProjet, String nomProjet,
+			Collection<Feedback> feedbacks) {
 		super();
 		this.idProjet = idProjet;
 		this.codeProjet = codeProjet;
 		this.nomProjet = nomProjet;
+		this.feedbacks = feedbacks;
 	}
+
 
 	public int getIdProjet() {
 		return this.idProjet;

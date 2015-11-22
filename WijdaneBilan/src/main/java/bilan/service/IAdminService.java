@@ -2,8 +2,6 @@ package bilan.service;
 
 import java.util.List;
 
-import org.apache.catalina.Manager;
-
 import bilan.entities.Managerrh;
 import bilan.entities.Admin; 
 
