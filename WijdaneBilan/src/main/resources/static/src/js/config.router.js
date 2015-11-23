@@ -38,6 +38,14 @@ angular.module('app')
                   url: '/collaborateurs',
                   templateUrl: 'tpl/collaborateurs.html'
               })
+			  .state('app.managers', {
+                  url: '/managers',
+                  templateUrl: 'tpl/managers.html'
+              })
+			  .state('app.encadrants', {
+                  url: '/encadrants',
+                  templateUrl: 'tpl/encadrants.html'
+              })
               .state('app.dashboard-v2', {
                   url: '/dashboard-v2',
                   templateUrl: 'tpl/app_dashboard_v2.html',

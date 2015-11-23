@@ -19,7 +19,7 @@ public class IManagerServiceImpl implements IManagerService {
 
 	@Override
 	public List<Managerrh> toutsManagers() {
-		return managerRepository.findAll();
+		return managerRepository.findAllManagers();
 	}
 
 	@Override

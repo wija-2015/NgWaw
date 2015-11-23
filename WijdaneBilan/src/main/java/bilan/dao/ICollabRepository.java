@@ -34,7 +34,7 @@ public interface ICollabRepository extends JpaRepository<Collaborateur, Long> {
 	//public List<Collaborateur> findAll();
 	
 
-	@Query("select c.nomUser as nom,c.prenomUser as prenom, c.matriculeUser as matric,c.dateRecrutement as date, c.mailUser as mail, m.nomUser as nomRH, m.prenomUser as prenomRH from Collaborateur c, Managerrh m where m.idManagerrh=c.managerrh.idManagerrh")
+	@Query("select c.nomUser, c.prenomUser, c.matriculeUser,c.dateRecrutement, c.mailUser, m.nomUser, m.prenomUser from Collaborateur c, Managerrh m where m.idManagerrh=c.managerrh.idManagerrh")
 	public List<Collaborateur> findAllCollabs();
 	
 	//@Query("insert into User (id, name) select c.id, c.name from Customer c where ...")

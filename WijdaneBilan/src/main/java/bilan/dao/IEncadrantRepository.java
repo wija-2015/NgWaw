@@ -30,6 +30,9 @@ public interface IEncadrantRepository extends JpaRepository<Encadrant, Long>{
 	
 	@Query("select c.nomUser,c.mailUser from Collaborateur c, EvaluationObjectif ev where ev.encadrant.idEncadrant like :x and c.idCollaborateur= ev.collaborateur.idCollaborateur")
 	public List<Collaborateur> findEncadrantCollabs(@Param("x")int id);
+	
+	@Query("select e.idEncadrant, e.prenomUser, e.nomUser, e.matriculeUser, e.mailUser, p.idProfil, p.nomProfil from Encadrant e, Profil p where e.profil.idProfil=p.idProfil")
+	public List<Encadrant> findAllEncadrants();
 
 	//public List<Managerrh> findAll();
 	

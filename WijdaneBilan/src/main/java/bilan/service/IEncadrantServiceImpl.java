@@ -19,7 +19,7 @@ public class IEncadrantServiceImpl implements IEncadrantService {
 	@Override
 	public List<Encadrant> toutsEncadrants() {
 		// TODO Auto-generated method stub
-		return encadrantRepository.findAll();
+		return encadrantRepository.findAllEncadrants();
 	}
 
 	@Override

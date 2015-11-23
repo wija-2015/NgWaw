@@ -29,6 +29,10 @@ public interface IManagerRepository extends JpaRepository<Managerrh, Long>{
 	
 	@Query("select c.nomUser,c.mailUser from Collaborateur c, Managerrh m where m.idManagerrh like :x and m.idManagerrh= c.managerrh.idManagerrh")
 	public List<Collaborateur> findManagerCollabs(@Param("x")int id);
+	
+	@Query("select c.idManagerrh, c.nomUser ,c.prenomUser , c.matriculeUser, c.mailUser from Managerrh c")
+	public List<Managerrh> findAllManagers();
+
 
 	public List<Managerrh> findAll();
 	
