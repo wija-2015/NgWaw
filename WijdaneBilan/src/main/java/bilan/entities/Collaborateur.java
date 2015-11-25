@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -27,11 +28,13 @@ public class Collaborateur implements Serializable {
 	private String prenomUser;
 
 	//bi-directional many-to-one association to Bap
+	@JsonIgnore
 	@OneToMany(mappedBy="collaborateur")
 	private Collection<Bap> baps;
 
 	//bi-directional many-to-one association to Managerrh
 	//@JsonBackReference
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="id_managerrh")
 	private Managerrh managerrh;
@@ -41,6 +44,7 @@ public class Collaborateur implements Serializable {
 	private Collection<EvaluationObjectif> evaluationobjectifs;
 
 	//bi-directional many-to-one association to Feedback
+	@JsonIgnore
 	@OneToMany(mappedBy="collaborateur")
 	private Collection<Feedback> feedbacks;
 

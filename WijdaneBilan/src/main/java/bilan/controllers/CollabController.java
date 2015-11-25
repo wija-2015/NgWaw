@@ -2,6 +2,8 @@ package bilan.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import bilan.dao.ICollabRepository;
 import bilan.entities.Collaborateur;
+import bilan.entities.Test;
 import bilan.service.ICollabService;
 
 @RestController
@@ -28,11 +31,10 @@ private ICollabService collabService;
 public List<Collaborateur> getCollabs(){
 return  collabService.toutsCollabs();
 }
-@RequestMapping(value="save", method = RequestMethod.POST)
-public Collaborateur saveCollab(@RequestBody Collaborateur c){
-	collabService.ajouterCollab(c);
-	System.out.println(c.toString()+"  wijdane ");
-return c;
+@RequestMapping(value="save", method = RequestMethod.POST,consumes={"application/json"},produces ={"application/json"})
+
+public Collaborateur saveCollab(@RequestBody Collaborateur c, HttpServletResponse response){
+	return collabService.ajouterCollab(c) ;
 }
 @RequestMapping(value="/{id}", method = RequestMethod.GET)
 public Collaborateur findCollab(@PathVariable("id") int id){
