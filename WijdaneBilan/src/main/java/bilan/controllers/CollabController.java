@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import bilan.dao.ICollabRepository;
 import bilan.entities.Collaborateur;
-import bilan.entities.Test;
 import bilan.service.ICollabService;
 
 @RestController
@@ -32,7 +31,6 @@ public List<Collaborateur> getCollabs(){
 return  collabService.toutsCollabs();
 }
 @RequestMapping(value="save", method = RequestMethod.POST,consumes={"application/json"},produces ={"application/json"})
-
 public Collaborateur saveCollab(@RequestBody Collaborateur c, HttpServletResponse response){
 	return collabService.ajouterCollab(c) ;
 }

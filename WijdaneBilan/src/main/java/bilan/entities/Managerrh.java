@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -25,7 +26,7 @@ public class Managerrh implements Serializable {
 	private String prenomUser;
 
 	//bi-directional many-to-one association to Collaborateur
-	@JsonManagedReference
+	@JsonIgnore
 	@OneToMany(mappedBy="managerrh")
 	private Collection<Collaborateur> collaborateurs;
 
@@ -42,7 +43,7 @@ public class Managerrh implements Serializable {
 		this.matriculeUser = matriculeUser;
 		this.nomUser = nomUser;
 		this.prenomUser = prenomUser;
-		this.collaborateurs = collaborateurs;
+		//this.collaborateurs = collaborateurs;
 	}
 */
 

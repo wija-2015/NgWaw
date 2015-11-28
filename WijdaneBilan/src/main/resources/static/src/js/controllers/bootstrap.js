@@ -97,7 +97,7 @@
   app.controller('ModalInstanceCtrl', ['$scope','$http','$modalInstance', function($scope, $http,$modalInstance) {
   	$scope.collaborateur={} ;
     $scope.inserer_collab = function () {
-		 $http.post("http://localhost:8090/collaborateurs/save",$scope.collaborateur)
+		 $http.post("http://localhost:8181/collaborateurs/save",$scope.collaborateur)
     .success(function(response) {  console.log(response);console.log(JSON.stringify($scope.collaborateur))});
 
     };

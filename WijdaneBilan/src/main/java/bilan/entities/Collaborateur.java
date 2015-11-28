@@ -40,6 +40,7 @@ public class Collaborateur implements Serializable {
 	private Managerrh managerrh;
 
 	//bi-directional many-to-one association to Evaluationobjectif
+	@JsonIgnore
 	@OneToMany(mappedBy="collaborateur")
 	private Collection<EvaluationObjectif> evaluationobjectifs;
 
@@ -50,7 +51,7 @@ public class Collaborateur implements Serializable {
 
 	public Collaborateur() {
 	}
-	public Collaborateur(int idCollaborateur, Date dateRecrutement,
+	/*public Collaborateur(int idCollaborateur, Date dateRecrutement,
 			String mailUser, String matriculeUser, String nomUser,
 			String prenomUser, Collection<Bap> baps, Managerrh managerrh,
 			Collection<EvaluationObjectif> evaluationobjectifs,
@@ -66,7 +67,7 @@ public class Collaborateur implements Serializable {
 		this.managerrh = managerrh;
 		this.evaluationobjectifs = evaluationobjectifs;
 		this.feedbacks = feedbacks;
-	}
+	}*/
 
 
 	public int getIdCollaborateur() {

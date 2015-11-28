@@ -6,11 +6,22 @@
         <div class="panel-heading font-bold">Horizontal form</div>
         <div class="panel-body">
           <form class="bs-example form-horizontal" >
-            <div class="form-group">
-              <label class="col-lg-2 control-label">Date de recrutement </label>
+          <div class="form-group">
+              <label class="col-lg-2 control-label">Prenom</label>
               <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="Date de recrutement" ng-model="collaborateur.dateRecrutement">
-              
+                <input type="text" class="form-control" placeholder="Prenom du collaborateur" ng-model="collaborateur.prenomUser">
+              </div>
+            </div>
+          <div class="form-group">
+              <label class="col-lg-2 control-label">Nom</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" placeholder="Nom du collaborateur" ng-model="collaborateur.nomUser">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label">Matricule</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" name="matriculeUser" placeholder="Matricule du collaborateur" ng-model="collaborateur.matriculeUser">
               </div>
             </div>
             <div class="form-group">
@@ -19,26 +30,13 @@
                 <input type="email" class="form-control" name="mailUser" placeholder="Email du collaborateur" ng-model="collaborateur.mailUser">
               </div>
             </div>
-      <div class="form-group">
-              <label class="col-lg-2 control-label">Matricule</label>
-              <div class="col-lg-10">
-                <input type="text" class="form-control" name="matriculeUser" placeholder="Matricule du collaborateur" ng-model="collaborateur.matriculeUser">
-              </div>
-            </div>
-    
             <div class="form-group">
-              <label class="col-lg-2 control-label">Nom</label>
+              <label class="col-lg-2 control-label">Date de recrutement </label>
               <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="Nom du collaborateur" ng-model="collaborateur.nomUser">
+                <input type="text" class="form-control" placeholder="Date de recrutement" ng-model="collaborateur.dateRecrutement">
+              
               </div>
-            </div>
-			<div class="form-group">
-              <label class="col-lg-2 control-label">Prenom</label>
-              <div class="col-lg-10">
-                <input type="text" class="form-control" placeholder="Prenom du collaborateur" ng-model="collaborateur.prenomUser">
-              </div>
-            </div>
-			
+            </div> 
 			<div class="form-group">
               <label class="col-lg-2 control-label">ID Manager</label><input type="number" ng-model="collaborateur.idManagerrh">
               <div class="col-lg-10">
@@ -48,7 +46,7 @@
             
             <div class="form-group">
               <div class="col-lg-offset-2 col-lg-10">
-                <button type="submit" class="btn btn-sm btn-info" ng-click="inserer_collab()">Valider hsdgfsdjg</button>
+                <button type="submit" class="btn btn-sm btn-info" ng-click="inserer_collab()">Valider </button>
               </div>
             </div>
           </form>

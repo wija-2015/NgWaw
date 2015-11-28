@@ -7,7 +7,7 @@ app.factory('Encadrant', function($http) {
 		//valeur de retour promise (on peut metre .then apres ) 
 		//la fct dans .then() représente le callback du succés
 		// .then() permet d’appeler des callbacks de succès ou d’erreur , sa signature :then(successCallback, errorCallback, notifyCallback)
-        promise = $http.get("http://localhost:8080/encadrants/findAll").then(function (response) {
+        promise = $http.get("http://localhost:8181/encadrants/findAll").then(function (response) {
           // Test Console
           console.log(response);
           // la valeur de retour sera reccuperé par le controller a travers Then()
