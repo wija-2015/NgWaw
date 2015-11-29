@@ -34,7 +34,7 @@ public class Collaborateur implements Serializable {
 
 	//bi-directional many-to-one association to Managerrh
 	//@JsonBackReference
-	@JsonIgnore
+	//@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="id_managerrh")
 	private Managerrh managerrh;
