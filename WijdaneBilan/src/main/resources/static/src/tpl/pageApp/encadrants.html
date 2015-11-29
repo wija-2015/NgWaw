@@ -4,9 +4,9 @@
 <div class="wrapper-md">
 	<!--<button class="btn m-b-xs btn-sm btn-primary btn-addon" data-target="#ajouterCollab" data-toggle="modal">Ajouter un collaborateur</button>
   -->
-   <div ng-controller="ModalDemoCtrl" class="panel b-a">
+   <div ng-controller="ModalDemoCtrlEncadrant" class="panel b-a">
           <script type="text/ng-template" id="myModalContent.html">
-            <div ng-include="'tpl/modal.html'"></div>
+            <div ng-include="'tpl/pageApp/modalEncadrant.html'"></div>
           </script>
           <div class="panel-heading b-b b-light">Ajout des encadrant</div>
           <div class="panel-body">
@@ -38,7 +38,7 @@
 		  
 		 <tbody>
 		  <tr ng-repeat="c in encadrants"><td>{{c[1]}}</td><td>{{c[2]}}</td><td>{{c[3]}}</td><td>{{c[4]}}</td>
-		  <td>{{c[6]}}</td><td><button class="btn btn-info" onclick="supprimer(c.idCollaborateur)">Modifier</button></td></tr>
+		  <td>{{c[6]}}</td><td><button class="btn btn-info" onclick="supprimer(c.idEncadrant)">Modifier</button></td></tr>
         </tbody>
 		<tfoot class="hide-if-no-paging">
           <tr>

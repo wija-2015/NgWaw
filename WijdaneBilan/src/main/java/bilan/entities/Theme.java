@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Collection;
 
 
@@ -16,6 +18,7 @@ public class Theme implements Serializable {
 	private String nomTheme;
 
 	//bi-directional many-to-one association to Qualification
+	@JsonIgnore
 	@OneToMany(mappedBy="theme")
 	private Collection<Qualification> qualifications;
 
@@ -23,13 +26,13 @@ public class Theme implements Serializable {
 	}
 	
 
-	public Theme(int idTheme, String nomTheme,
+	/*public Theme(int idTheme, String nomTheme,
 			Collection<Qualification> qualifications) {
 		super();
 		this.idTheme = idTheme;
 		this.nomTheme = nomTheme;
 		this.qualifications = qualifications;
-	}
+	}*/
 
 
 	public int getIdTheme() {

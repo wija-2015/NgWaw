@@ -2,15 +2,19 @@ package bilan.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import bilan.entities.Profil;
+import bilan.entities.Projet;
 import bilan.service.IProfilService;
 
 @RestController
@@ -24,10 +28,9 @@ private IProfilService profilService;
 public List<Profil> getProfils(){
 return profilService.toutsProfils();
 }
-@RequestMapping(value="save", method = RequestMethod.GET)
-public Profil saveProfil(Profil c){
-	profilService.ajouterProfil(c);
-return c;
+@RequestMapping(value="save", method = RequestMethod.POST,consumes={"application/json"},produces ={"application/json"})
+public Profil saveProfil(@RequestBody Profil p, HttpServletResponse response){
+	return	profilService.ajouterProfil(p);
 }
 @RequestMapping(value="/{id}", method = RequestMethod.GET)
 public Profil findProfil(@PathVariable("id") int id){

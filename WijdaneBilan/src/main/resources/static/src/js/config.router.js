@@ -36,16 +36,17 @@ angular.module('app')
               })
 			  .state('app.collaborateurs', {
                   url: '/collaborateurs',
-                  templateUrl: 'tpl/collaborateurs.html'
+                  templateUrl: 'tpl/pageApp/collaborateurs.html'
               })
 			  .state('app.managers', {
                   url: '/managers',
-                  templateUrl: 'tpl/managers.html'
+                  templateUrl: 'tpl/pageApp/managers.html'
               })
 			  .state('app.encadrants', {
                   url: '/encadrants',
-                  templateUrl: 'tpl/encadrants.html'
+                  templateUrl: 'tpl/pageApp/encadrants.html'
               })
+			  
               .state('app.dashboard-v2', {
                   url: '/dashboard-v2',
                   templateUrl: 'tpl/app_dashboard_v2.html',

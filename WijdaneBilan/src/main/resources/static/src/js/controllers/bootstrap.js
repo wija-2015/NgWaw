@@ -94,7 +94,7 @@
     };
   }])
   ; 
-  app.controller('ModalInstanceCtrl', ['$scope','$http','$modalInstance', function($scope, $http,$modalInstance) {
+  /* app.controller('ModalInstanceCtrl', ['$scope','$http','$modalInstance', function($scope, $http,$modalInstance) {
   	$scope.collaborateur={} ;
     $scope.inserer_collab = function () {
 		 $http.post("http://localhost:8181/collaborateurs/save",$scope.collaborateur)
@@ -137,7 +137,7 @@
       });
     };
   }])
-  ; 
+  ;  */
   app.controller('PaginationDemoCtrl', ['$scope', '$log', function($scope, $log) {
     $scope.totalItems = 64;
     $scope.currentPage = 4;

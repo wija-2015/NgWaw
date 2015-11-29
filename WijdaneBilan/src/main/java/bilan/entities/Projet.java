@@ -4,10 +4,15 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import java.util.Collection;
 
 
 @Entity
+@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Projet implements Serializable {
 
 	@Id
@@ -17,21 +22,21 @@ public class Projet implements Serializable {
 	private String nomProjet;
 
 	//bi-directional many-to-one association to Feedback
+	@JsonIgnore
 	@OneToMany(mappedBy="projet")
 	private Collection<Feedback> feedbacks;
 
 	public Projet() {
 	}
 
-
-	public Projet(int idProjet, String codeProjet, String nomProjet,
+	/*public Projet(int idProjet, String codeProjet, String nomProjet,
 			Collection<Feedback> feedbacks) {
 		super();
 		this.idProjet = idProjet;
 		this.codeProjet = codeProjet;
 		this.nomProjet = nomProjet;
 		this.feedbacks = feedbacks;
-	}
+	}*/
 
 
 	public int getIdProjet() {

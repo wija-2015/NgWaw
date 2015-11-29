@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Collection;
 
 
@@ -15,20 +17,21 @@ public class Categorie implements Serializable {
 	private int idCategorie;
 	private String nomCategorie;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="categorie")
 	private Collection<Objectif> objectifs;
 
 	public Categorie() {
 	}
 
-	public Categorie(int idCategorie, String nomCategorie,
+	/*public Categorie(int idCategorie, String nomCategorie,
 			Collection<Objectif> objectifs) {
 		super();
 		this.idCategorie = idCategorie;
 		this.nomCategorie = nomCategorie;
 		this.objectifs = objectifs;
 	}
-
+*/
 	public int getIdCategorie() {
 		return this.idCategorie;
 	}
